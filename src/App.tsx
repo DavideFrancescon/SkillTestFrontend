@@ -46,8 +46,7 @@ function App() {
 }
 interface ProtectedProps {
   isLogged: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  children: any;
+  children: JSX.Element;
 }
 const Protected: React.FC<ProtectedProps> = ({ isLogged, children }) => {
   if (!isLogged) {
