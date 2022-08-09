@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { RootState } from "store";
@@ -8,6 +8,7 @@ import userModel from "model/userModel";
 import Datas from "components/Dashboard/components/Datas";
 import DataTable from "components/Dashboard/components/DataTable";
 import Profile from "components/Profile/Profile";
+import Signup from "components/Signup/Signup";
 
 function App() {
   const user: userModel = useSelector((state: RootState) => state.user);
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
       <Route
         path="/changepassword"
         element={<div> fai finta che abbia cambiato la password </div>}

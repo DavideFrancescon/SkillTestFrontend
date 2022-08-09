@@ -48,7 +48,7 @@ function Profile() {
           },
         }
       )
-      .then((response) => {
+      .then(() => {
         dispatch(changeRandomColor(randomColor));
         setValue("random_color", randomColor);
       });
